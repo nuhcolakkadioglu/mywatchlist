@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { GlobalContext } from '../context/GlobalState';
 import ResultCart from './ResultCart';
 
 const Add = () => {
