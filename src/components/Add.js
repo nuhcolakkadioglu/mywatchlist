@@ -9,7 +9,7 @@ const Add = () => {
     useEffect(() => {
 
         if (query.length >= 3) {
-            fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&query=
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=4e3cfcb8779ffd9fd607e2cb657c5ed1&language=en-US&query=
             ${query}&page=1&include_adult=false`)
                 .then((res) => res.json()).then((data) => setResults(data.results));
         } else {
