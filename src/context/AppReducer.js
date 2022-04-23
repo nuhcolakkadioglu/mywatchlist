@@ -17,6 +17,18 @@ export default (state, action) => {
                 watchlist: state.watchlist.filter((item) => item.id !== action.payload.id),
                 watched: [...state.watched, action.payload]
             }
+        case "MOVE_TO_WATCHED":
+            return {
+                ...state,
+                watched: state.watched.filter((item) => item.id !== action.payload.id),
+                watchlist: [...state.watchlist, action.payload]
+            }
+        case "REMOVE_MOVIE_FROM_WATCHED":
+            return {
+                ...state,
+                watched: state.watched.filter((item) => item.id !== action.payload)
+            }
+
         default:
             return state;
     }

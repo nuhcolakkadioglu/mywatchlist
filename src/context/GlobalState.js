@@ -28,13 +28,23 @@ export const GlobalPrivider = (props) => {
 
     }
 
+    const moveToWathlist = (movie) => {
+        dispathc({ type: "MOVE_TO_WATCHED", payload: movie });
+    }
+
+    const removeFromWatchedList = (id) => {
+        dispathc({ type: "REMOVE_MOVIE_FROM_WATCHED", payload: id });
+    }
+
     return (
         <GlobalContext.Provider value={{
             watchlist: state.watchlist,
             watched: state.watched,
             addMovieToWatchList,
             removeMovieFromWatchList,
-            addMovieToWatched
+            addMovieToWatched,
+            moveToWathlist,
+            removeFromWatchedList
         }}>
             {props.children}
         </GlobalContext.Provider>
