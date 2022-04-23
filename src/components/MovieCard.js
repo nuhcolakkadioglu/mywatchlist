@@ -2,7 +2,6 @@ import React from 'react'
 import MovieControls from './MovieControls';
 
 const MovieCard = ({ movie }) => {
-    console.log(movie);
     return (
         <div className='movie-card'>
             <div className="overlay"></div>
